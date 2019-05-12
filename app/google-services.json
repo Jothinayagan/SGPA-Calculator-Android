@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "126919773191",
+    "firebase_url": "https://jothinayagan-sgpa-calc.firebaseio.com",
+    "project_id": "jothinayagan-sgpa-calc",
+    "storage_bucket": "jothinayagan-sgpa-calc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126919773191:android:c7f76e54addf78b5",
+        "android_client_info": {
+          "package_name": "com.jothinayagan.sgpacalc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126919773191-bo272bgnjkndcn9b6f1mi03ge7p9ggfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuJt_XkXlBB8E55_939qopIro7G2eOizs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126919773191-bo272bgnjkndcn9b6f1mi03ge7p9ggfc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

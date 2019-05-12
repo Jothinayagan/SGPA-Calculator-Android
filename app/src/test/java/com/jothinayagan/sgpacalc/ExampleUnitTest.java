@@ -1,4 +1,4 @@
-package com.example.sgpacalculator_makeitsimple;
+package com.jothinayagan.sgpacalculator_makeitsimple;
 
 import org.junit.Test;
 
