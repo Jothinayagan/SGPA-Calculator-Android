@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mmshare"
+        android:title="@string/share"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/mmrate"
+        android:title="Rate"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/mmfeedback"
+        android:title="Feedback"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/mmexit"
+        android:title="Exit"
+        app:showAsAction="never" />
+</menu>

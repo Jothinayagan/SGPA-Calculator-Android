@@ -7,6 +7,9 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -93,5 +96,40 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             finish();
             startActivity(new Intent(this, UserRegActivity.class));
         }
+    }
+
+    //Option Menu
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.mainmenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.mmshare:
+                Toast.makeText(this, "Ping Pong...", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.mmrate:
+                Toast.makeText(this, "Ping Pong...", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.mmfeedback:
+                Intent Email = new Intent(Intent.ACTION_SEND);
+                Email.setType("text/email");
+                Email.putExtra(Intent.EXTRA_EMAIL, new String[] { "v.i.jothinayagan.307@gmail.com" });
+                Email.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
+                startActivity(Intent.createChooser(Email, "Send Feedback:"));
+                break;
+
+            case R.id.mmexit:
+                Toast.makeText(this, "Ping Pong...", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
     }
 }

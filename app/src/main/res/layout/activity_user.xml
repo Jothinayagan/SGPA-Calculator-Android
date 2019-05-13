@@ -7,11 +7,11 @@
     tools:context=".UserActivity">
 
     <TextView
-        android:id="@+id/userText"
+        android:id="@+id/userActText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="161dp"
         android:fontFamily="@font/pt_sans_bold"
         android:text="TextView"
@@ -20,19 +20,240 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/userLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="355dp"
-        android:text="Logout"
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/userActText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:id="@+id/textCredit"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Credit"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textGrade"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Grade"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/credit1"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/grade1"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/credit2"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/grade2"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/credit3"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/grade3"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/credit4"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/grade4"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay5"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/credit5"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/grade5"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay6"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/credit6"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/grade6"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay7"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/credit7"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/grade7"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay8"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/credit8"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/grade8"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay9"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/credit9"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/grade9"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay10"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Spinner
+                    android:id="@+id/credit10"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/grade10"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Submit" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
