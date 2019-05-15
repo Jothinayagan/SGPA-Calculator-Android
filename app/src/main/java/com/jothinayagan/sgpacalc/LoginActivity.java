@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView signup;
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
+    private TextView forgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,15 +45,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         progressDialog = new ProgressDialog(this);
 
-        logButton = findViewById(R.id.logBut);
-
+        logButton = (Button) findViewById(R.id.logBut);
         email = findViewById(R.id.regEmail);
         password = findViewById(R.id.logPassword);
-
         signup = findViewById(R.id.logSignup);
+        forgotPassword = (TextView) findViewById(R.id.forgetPassword);
 
         logButton.setOnClickListener(this);
         signup.setOnClickListener(this);
+        forgotPassword.setOnClickListener(this);
     }
 
     private void userLogin(){
@@ -65,7 +66,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this, "Invalid Email, Enter valid Email", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (logpass.equals("") || logpass.length()<=6){
+        if (logpass.equals("") || logpass.length()<6){
             //password.setError("Enter valid password");
             Toast.makeText(this, "Password must be more than 6 characters", Toast.LENGTH_SHORT).show();
             return;
@@ -96,40 +97,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             finish();
             startActivity(new Intent(this, UserRegActivity.class));
         }
-    }
-
-    //Option Menu
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.mainmenu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.mmshare:
-                Toast.makeText(this, "Ping Pong...", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.mmrate:
-                Toast.makeText(this, "Ping Pong...", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.mmfeedback:
-                Intent Email = new Intent(Intent.ACTION_SEND);
-                Email.setType("text/email");
-                Email.putExtra(Intent.EXTRA_EMAIL, new String[] { "v.i.jothinayagan.307@gmail.com" });
-                Email.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
-                startActivity(Intent.createChooser(Email, "Send Feedback:"));
-                break;
-
-            case R.id.mmexit:
-                Toast.makeText(this, "Ping Pong...", Toast.LENGTH_SHORT).show();
-                break;
+        if(v == forgotPassword){
+            finish();
+            startActivity(new Intent(this, PasswordEmailActivity.class));
         }
-        return true;
     }
 }
