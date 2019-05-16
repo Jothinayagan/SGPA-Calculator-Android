@@ -26,6 +26,7 @@ public class UserActivity extends AppCompatActivity {
     private TextView userText;
     private TextView resmama;
     private Button resultButton;
+    private Button resetButton;
     private Spinner c1, c2, c3, c4, c5, c6, c7, c8, c9, c10;
     private Spinner g1, g2, g3, g4, g5, g6, g7, g8, g9, g10;
     private String cre1, cre2, cre3, cre4, cre5, cre6, cre7, cre8, cre9, cre10;
@@ -46,6 +47,7 @@ public class UserActivity extends AppCompatActivity {
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         resultButton = findViewById(R.id.resultBut);
+        resetButton = findViewById(R.id.resultBut2Reset);
         resmama = findViewById(R.id.resultmama);
         userText = findViewById(R.id.userActText);
         userText.setText("Welcome " + user.getEmail());
@@ -379,7 +381,36 @@ public class UserActivity extends AppCompatActivity {
 
                 float fin = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10;
                 float sgpa = fin / totalCredit;
-                resmama.setText(String.valueOf(sgpa));
+                resmama.setText("Your SGPA is " + sgpa);
+            }
+        });
+
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                c1.setSelection(0);
+                c2.setSelection(0);
+                c3.setSelection(0);
+                c4.setSelection(0);
+                c5.setSelection(0);
+                c6.setSelection(0);
+                c7.setSelection(0);
+                c8.setSelection(0);
+                c9.setSelection(0);
+                c10.setSelection(0);
+
+                g1.setSelection(0);
+                g2.setSelection(0);
+                g3.setSelection(0);
+                g4.setSelection(0);
+                g5.setSelection(0);
+                g6.setSelection(0);
+                g7.setSelection(0);
+                g8.setSelection(0);
+                g9.setSelection(0);
+                g10.setSelection(0);
+
+                resmama.setText("Enter your details below..");
             }
         });
     }
