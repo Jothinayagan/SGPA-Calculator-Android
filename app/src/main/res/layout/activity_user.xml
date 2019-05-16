@@ -37,6 +37,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/resultmama"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="TextView"
+                android:textSize="24sp" />
+
             <LinearLayout
                 android:id="@+id/linText"
                 android:layout_width="match_parent"
@@ -247,7 +255,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/result"
+                    android:id="@+id/resultBut"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"

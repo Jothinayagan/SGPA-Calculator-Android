@@ -23,6 +23,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private long backPressedTime;
+    private Toast backToast;
     private Button logButton;
     private EditText email, password;
     private TextView signup;
@@ -56,18 +58,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         forgotPassword.setOnClickListener(this);
     }
 
+    //Double tap to close the app
+    @Override
+    public void onBackPressed() {
+        if(backPressedTime + 2000 > System.currentTimeMillis()) {
+            backToast.cancel();
+            super.onBackPressed();
+            return;
+        } else {
+            backToast = Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+
+        backPressedTime = System.currentTimeMillis();
+    }
+
     private void userLogin(){
         String logemail = email.getText().toString().trim();
         String logpass = password.getText().toString().trim();
 
-        //validation if empty
+        //validate email and password
         if (!logemail.matches("[a-zA-Z0-9._-]+@[a-z]+.[a-z]+")){
-            //email.setError("Invalid Email");
             Toast.makeText(this, "Invalid Email, Enter valid Email", Toast.LENGTH_SHORT).show();
             return;
         }
         if (logpass.equals("") || logpass.length()<6){
-            //password.setError("Enter valid password");
             Toast.makeText(this, "Password must be more than 6 characters", Toast.LENGTH_SHORT).show();
             return;
         }
