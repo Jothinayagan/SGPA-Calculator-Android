@@ -381,7 +381,7 @@ public class UserActivity extends AppCompatActivity {
 
                 float fin = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10;
                 float sgpa = fin / totalCredit;
-                resmama.setText("Your SGPA is " + sgpa);
+                resmama.setText("Your SGPA is "+ sgpa);
             }
         });
 

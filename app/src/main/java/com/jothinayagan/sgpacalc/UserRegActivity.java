@@ -121,7 +121,11 @@ public class UserRegActivity extends AppCompatActivity implements View.OnClickLi
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.mmshare:
-                Toast.makeText(this, "Ping Pong...", Toast.LENGTH_SHORT).show();
+                Intent share = new Intent(android.content.Intent.ACTION_SEND);
+                share.setType("text/plain");
+                String body = "Hey there.. I'm using this app. Install this in your device.";
+                share.putExtra(Intent.EXTRA_SUBJECT, body);
+                startActivity(Intent.createChooser(share, "Share via"));
                 break;
 
             case R.id.mmrate:

@@ -99,6 +99,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if(task.isSuccessful()){
                             finish();
                             startActivity(new Intent(getApplicationContext(), UserActivity.class));
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Login Failed...", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -116,5 +118,44 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             finish();
             startActivity(new Intent(this, PasswordEmailActivity.class));
         }
+    }
+
+    //Option Menu
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.mainmenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.mmshare:
+                Intent share = new Intent(android.content.Intent.ACTION_SEND);
+                share.setType("text/plain");
+                String body = "Hey there.. I'm using this app. Install this in your device.";
+                share.putExtra(Intent.EXTRA_SUBJECT, body);
+                startActivity(Intent.createChooser(share, "Share via"));
+                break;
+
+            case R.id.mmrate:
+                Toast.makeText(this, "Ping Pong...", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.mmfeedback:
+                Intent Email = new Intent(Intent.ACTION_SEND);
+                Email.setType("text/email");
+                Email.putExtra(Intent.EXTRA_EMAIL, new String[] { "v.i.jothinayagan.307@gmail.com" });
+                Email.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
+                startActivity(Intent.createChooser(Email, "Send Feedback:"));
+                break;
+
+            case R.id.mmexit:
+                Toast.makeText(this, "Ping Pong...", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
     }
 }

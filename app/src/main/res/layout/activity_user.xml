@@ -21,9 +21,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/resultDisplay"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,51 +32,58 @@
         <TextView
             android:id="@+id/resultmama"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Enter below details below.."
+            android:text="Enter your details below.."
             android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultDisplay">
+
+        <LinearLayout
+            android:id="@+id/linText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textCredit"
+                android:layout_width="204dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Credit"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textGrade"
+                android:layout_width="204dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Grade"
+                android:textSize="24sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/linText"
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <TextView
-                    android:id="@+id/textCredit"
-                    android:layout_width="198dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Credit"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:id="@+id/textGrade"
-                    android:layout_width="195dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Grade"
-                    android:textSize="24sp" />
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linlay1"
@@ -85,13 +92,13 @@
 
                 <Spinner
                     android:id="@+id/credit1"
-                    android:layout_width="198dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
                 <Spinner
                     android:id="@+id/grade1"
-                    android:layout_width="195dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
             </LinearLayout>
@@ -103,13 +110,13 @@
 
                 <Spinner
                     android:id="@+id/credit2"
-                    android:layout_width="198dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
                 <Spinner
                     android:id="@+id/grade2"
-                    android:layout_width="195dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
             </LinearLayout>
@@ -121,13 +128,13 @@
 
                 <Spinner
                     android:id="@+id/credit3"
-                    android:layout_width="198dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
                 <Spinner
                     android:id="@+id/grade3"
-                    android:layout_width="195dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
             </LinearLayout>
@@ -139,13 +146,13 @@
 
                 <Spinner
                     android:id="@+id/credit4"
-                    android:layout_width="198dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
                 <Spinner
                     android:id="@+id/grade4"
-                    android:layout_width="195dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
             </LinearLayout>
@@ -157,13 +164,13 @@
 
                 <Spinner
                     android:id="@+id/credit5"
-                    android:layout_width="198dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
                 <Spinner
                     android:id="@+id/grade5"
-                    android:layout_width="195dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
             </LinearLayout>
@@ -175,13 +182,13 @@
 
                 <Spinner
                     android:id="@+id/credit6"
-                    android:layout_width="198dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
                 <Spinner
                     android:id="@+id/grade6"
-                    android:layout_width="195dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
             </LinearLayout>
@@ -193,13 +200,13 @@
 
                 <Spinner
                     android:id="@+id/credit7"
-                    android:layout_width="198dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
                 <Spinner
                     android:id="@+id/grade7"
-                    android:layout_width="195dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
             </LinearLayout>
@@ -211,13 +218,13 @@
 
                 <Spinner
                     android:id="@+id/credit8"
-                    android:layout_width="198dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
                 <Spinner
                     android:id="@+id/grade8"
-                    android:layout_width="195dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
             </LinearLayout>
@@ -229,13 +236,13 @@
 
                 <Spinner
                     android:id="@+id/credit9"
-                    android:layout_width="198dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
                 <Spinner
                     android:id="@+id/grade9"
-                    android:layout_width="195dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
             </LinearLayout>
@@ -247,38 +254,50 @@
 
                 <Spinner
                     android:id="@+id/credit10"
-                    android:layout_width="198dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
                 <Spinner
                     android:id="@+id/grade10"
-                    android:layout_width="195dp"
+                    android:layout_width="204dp"
                     android:layout_height="match_parent"
                     android:gravity="center" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/linButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <Button
-                    android:id="@+id/resultBut2Reset"
-                    android:layout_width="198dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Reset" />
-
-                <Button
-                    android:id="@+id/resultBut"
-                    android:layout_width="198dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Submit" />
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3">
+
+        <LinearLayout
+            android:id="@+id/linButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/resultBut2Reset"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Reset" />
+
+            <Button
+                android:id="@+id/resultBut"
+                android:layout_width="195dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Submit" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
